@@ -1,5 +1,5 @@
 {
-  "name": "xmldom",
+  "name": "xmldom-qsa",
   "version": "0.1.15",
   "main": "dom-parser.js",
   "ignore": [
