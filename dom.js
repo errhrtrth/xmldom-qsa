@@ -1234,7 +1234,27 @@ try{
 }catch(e){//ie8
 }
 
-//if(typeof require == 'function'){
-	exports.DOMImplementation = DOMImplementation;
-	exports.XMLSerializer = XMLSerializer;
-//}
+var nwmatcher = require("nwmatcher/src/nwmatcher-noqsa");
+function addNwmatcher(parentNode) {
+	return nwmatcher(global);
+}
+[Document, DocumentFragment, Element].forEach(function (Class) {
+	Class.prototype.querySelector = function (selectors) {
+		return addNwmatcher(this).first(String(selectors), this);
+	};
+
+	Class.prototype.querySelectorAll = function (selectors) {
+		return addNwmatcher(this).select(String(selectors), this);
+	};
+});
+
+Element.prototype.matches = function (selectors) {
+	return addNwmatcher(this).match(this, selectors);
+};
+
+
+ exports.Node = Node;
+ exports.NodeList = NodeList;
+ exports.DOMImplementation = DOMImplementation;
+ exports.XMLSerializer = XMLSerializer;
+
