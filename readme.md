@@ -1,4 +1,6 @@
-# XMLDOM [![Build Status](https://secure.travis-ci.org/bigeasy/xmldom.png?branch=master)](http://travis-ci.org/bigeasy/xmldom) [![Coverage Status](https://coveralls.io/repos/bigeasy/xmldom/badge.png?branch=master)](https://coveralls.io/r/bigeasy/xmldom) [![NPM version](https://badge.fury.io/js/xmldom.png)](http://badge.fury.io/js/xmldom)
+# XMLDOM 
+
+This is based on [xmldom](https://github.com/jindw/xmldom) with some minor enhancements.
 
 A JavaScript implementation of W3C DOM for Node.js, Rhino and the browser. Fully
 compatible with `W3C DOM level2`; and some compatible with `level3`. Supports
@@ -6,12 +8,25 @@ compatible with `W3C DOM level2`; and some compatible with `level3`. Supports
 
 Install:
 -------
->npm install xmldom
+>npm install xmldom-qsa
+
+Enhancements:
+`xmldom-qsa` add `querySelector`, `querySelectorAll`and `match` method to `Document` and `Element`. And you can write some more methods to these elements by add `prototype` methods to Node.
+====
+```javascript
+...
+doc.documentElement.querySelector('.clazz');
+
+var Node = require('xmldom-qsa/dom').Node;
+Node.prototype.addAttr = function(x,y) { ... }
+doc.documentElement.addAttr('x','y');
+...
+```
 
 Example:
 ====
 ```javascript
-var DOMParser = require('xmldom').DOMParser;
+var DOMParser = require('xmldom-qsa').DOMParser;
 var doc = new DOMParser().parseFromString(
     '<xml xmlns="a" xmlns:c="./lite">\n'+
         '\t<child>test</child>\n'+

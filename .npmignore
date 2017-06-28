@@ -3,3 +3,4 @@ t
 travis.yml
 .project
 changelog
+/node_modules

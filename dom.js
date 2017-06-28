@@ -1253,8 +1253,7 @@ Element.prototype.matches = function (selectors) {
 };
 
 
- exports.Node = Node;
- exports.NodeList = NodeList;
- exports.DOMImplementation = DOMImplementation;
- exports.XMLSerializer = XMLSerializer;
+exports.Node = Node;
+exports.DOMImplementation = DOMImplementation;
+exports.XMLSerializer = XMLSerializer;
 
