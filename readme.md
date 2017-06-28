@@ -6,7 +6,7 @@ A JavaScript implementation of W3C DOM for Node.js, Rhino and the browser. Fully
 compatible with `W3C DOM level2`; and some compatible with `level3`. Supports
 `DOMParser` and `XMLSerializer` interface such as in browser.
 
-`xmldom-qsa` add `querySelector`, `querySelectorAll`and `match` method to `Document` and `Element`. And you can write some more methods to these elements by add `prototype` methods to Node.
+`xmldom-qsa` add `querySelector`, `querySelectorAll` and `match` method to `Document` and `Element`. And you can write some more methods to these elements by add `prototype` methods to Node.
 
 Install:
 -------
@@ -15,13 +15,13 @@ Install:
 Enhancements:
 ====
 ```javascript
-...
+
 doc.documentElement.querySelector('.clazz');
 
 var Node = require('xmldom-qsa/dom').Node;
 Node.prototype.addAttr = function(x,y) { ... }
 doc.documentElement.addAttr('x','y');
-...
+
 ```
 
 Example:
