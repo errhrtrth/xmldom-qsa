@@ -1,6 +1,6 @@
 {
   "name": "xmldom-qsa",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A W3C Standard XML DOM(Level2 CORE) implementation and parser(DOMParser/XMLSerializer).",
   "keywords": ["w3c","dom","xml","parser","javascript","DOMParser","XMLSerializer"],
   "author": "Zelig <zeligzhou@gmail.com> (https://github.com/zeligzhou)",
@@ -18,6 +18,6 @@
     {"name" : "Alan Gutierrez","email" : "alan@prettyrobots.com","web" : "http://www.prettyrobots.com/"},
     {"name" : "jindw","email" : "jindw@xidea.org","web" : "http://www.xidea.org/"}
   ],
-  "bugs": {"email": "jindw@xidea.org","url": "http://github.com/jindw/xmldom/issues"},
+  "bugs": {"email": "zeligzhou@gmail.com","url": "https://github.com/zeligzhou/xmldom-qsa/issues"},
   "license": "(LGPL-2.0 or MIT)"
 }
