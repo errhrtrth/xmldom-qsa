@@ -1,4 +1,4 @@
-# XMLDOM 
+# XMLDOM-QSA 
 
 This is based on [xmldom](https://github.com/jindw/xmldom) with some minor enhancements.
 
@@ -6,12 +6,13 @@ A JavaScript implementation of W3C DOM for Node.js, Rhino and the browser. Fully
 compatible with `W3C DOM level2`; and some compatible with `level3`. Supports
 `DOMParser` and `XMLSerializer` interface such as in browser.
 
+`xmldom-qsa` add `querySelector`, `querySelectorAll`and `match` method to `Document` and `Element`. And you can write some more methods to these elements by add `prototype` methods to Node.
+
 Install:
 -------
 >npm install xmldom-qsa
 
 Enhancements:
-`xmldom-qsa` add `querySelector`, `querySelectorAll`and `match` method to `Document` and `Element`. And you can write some more methods to these elements by add `prototype` methods to Node.
 ====
 ```javascript
 ...
